@@ -1,0 +1,3 @@
+run:
+  # https://github.com/golangci/golangci-lint/pull/2438
+  go: 1.19

@@ -1,0 +1,10 @@
+pre-commit:
+  piped: true
+  commands:
+    0:
+      glob: '*.go'
+      run: |
+        go mod tidy && \
+        golangci-lint cache clean && \
+        golangci-lint run --fix && \
+        git add {staged_files}

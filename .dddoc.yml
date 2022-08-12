@@ -1,0 +1,26 @@
+packages: './etc/example/...'
+
+output:
+  file: './var/tmp/dddoc/domain.png'
+  graph:
+    edge:
+      factory:
+        label: 'creates'
+        style: 'dashed'
+      repository:
+        label: 'saves'
+        style: 'dashed'
+
+parser:
+  # ignored:
+  #   name: '^.*(Factory|FactoryOptions|Repository)$'
+  entity:
+    id:
+      name: '^ID$'
+    field:
+      tag:
+        name: '^(belongsTo|hasOne|hasMany)$'
+  factory:
+    name: '^([A-Z][A-Za-z0-9]+)Factory$'
+  repository:
+    name: '^([A-Z][A-Za-z0-9]+)Repository$'
